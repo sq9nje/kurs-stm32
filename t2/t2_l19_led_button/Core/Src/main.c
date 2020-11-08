@@ -98,10 +98,11 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-	  if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin))
-		  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
-	  else
-		  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+	  if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin)) {
+		  HAL_Delay(20);
+		  if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin))
+			  HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+	  }
 
     /* USER CODE BEGIN 3 */
   }

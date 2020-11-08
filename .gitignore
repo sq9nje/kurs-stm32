@@ -53,5 +53,9 @@ dkms.conf
 /.metadata/
 
 Binaries/*
-docs
-RemoteSystemTempFiles
+Debug
+*launch
+*backup
+/mateusz
+/docs
+/RemoteSystemTempFiles
